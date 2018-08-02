@@ -1,0 +1,13 @@
+.logo {
+    width: 200px;
+    height: $logo-height;
+    background-image: url({Logo});
+    cursor: pointer;
+    outline: none;
+}
+
+@media (max-width: $mobile-width) {
+    .logo {
+        width: 58px;
+    }
+}

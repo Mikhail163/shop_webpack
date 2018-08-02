@@ -1,0 +1,27 @@
+$max-width:1600px;
+$max-width-padding:30px;
+$min-width:320px;
+$logo-height:63px;
+
+$mobile-width:600px;
+
+$main_red:#ee6255;
+
+.triangle {
+    content: "";
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid;
+    margin-top: -3px;
+    height: 0;
+    width: 0;
+}
+
+
+@mixin color_pointer($color) {
+    color: $color;
+    cursor: pointer;
+}
