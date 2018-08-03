@@ -127,7 +127,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: white;
+                //background-color: white;
+                border-radius: 3px;
 
                 img {
                     filter: grayscale(100%);

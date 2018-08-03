@@ -92,7 +92,7 @@
         padding-left: 15px;
         padding-right: 15px;
         z-index: 5;
-        padding-bottom: 15px;
+        //padding-bottom: 15px;
 
         &:after {
             content: '';
@@ -105,6 +105,10 @@
             box-shadow: -1px -1px 0 #e6e6e6;
         }
 
+        &-last {
+            border-bottom-width: 0px !important;
+            margin-bottom: 0px !important;
+        }
 
         &-title {
             height: 39px;

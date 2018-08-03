@@ -1,13 +1,32 @@
 .logo {
-    width: 79px;
+    //width: 179px;
     height: $logo-height;
     background-image: url(/i/tromart63.png);
+    background-repeat: no-repeat;
     cursor: pointer;
     outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & > span {
+        padding-left: 85px;
+    }
+
+    &-title {
+        font-weight: bold;
+        
+    }
+
+    &-description {
+    }
 }
 
 @media (max-width: $mobile-width) {
     .logo {
-        width: 58px;
+        width: 79px;
+    }
+    .logo-title, .logo-description {
+        display:none;
     }
 }
