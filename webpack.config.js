@@ -10,7 +10,7 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.[chunkhash].js'
+        filename: 'js/app.[chunkhash].js'
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -21,13 +21,19 @@ module.exports = {
     module: {
         rules: [
             {
-				test: /\.(png|jpg|jpeg|svg|gif)$/,
-				use: [
-					{
-						loader: 'file-loader'
-					}
-				]
-			},
+                test: /\.(png|jpg|jpeg|svg|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'i/[name].[ext]'
+                },
+             },
+             {
+                test: /\.(ico)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]'
+                },
+             },
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
@@ -39,14 +45,14 @@ module.exports = {
                 test: /\.s?css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', 'postcss-loader', 'sass-loader']
+                    use: ['css-loader', 'postcss-loader', 'sass-loader'],
                 })
             }
         ]
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'main.[chunkhash].css',
+            filename: 'css/main.[chunkhash].css',
             disable: false,
             allChunks: true
 
