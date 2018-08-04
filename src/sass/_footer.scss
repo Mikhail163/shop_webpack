@@ -64,6 +64,8 @@
             padding: 0;
             margin-left: 5px;
             box-sizing: border-box;
+            word-wrap: break-word;
+            word-break: break-all;
 
             &_title {
                 margin-top: 5px;
